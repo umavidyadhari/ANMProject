@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Switch Moniter</title>
+
+   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    
+   
+  </head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Switch Monitering</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Hosts<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Switches</a></li>
+        <li><a href="#">Spanning Tree</a></li>
+        <li><a href="#">MAC collisions</a></li>
+        <li><a href="#">Link Speed</a></li>
+       
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" name="mac" class="form-control" placeholder="Search">
+        </div>
+        <button id="search" type="button" class="btn btn-default">search</button>
+      </form>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+  	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Switch Name</label>
+    <input type="text" class="form-control" name = "switch" placeholder="Switch">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Switch IP</label>
+    <input type="text" class="form-control" name="ip" placeholder="ip">
+  </div>
+  
+  
+  <button id="newswitch" type="button" class="btn btn-default">Submit</button>
+</form>
+  </div>
+  <div class="col-md-4">
+  	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+</body>

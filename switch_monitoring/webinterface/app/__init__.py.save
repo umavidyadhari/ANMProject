@@ -1,0 +1,32 @@
+#API to search for information base on device_name
+@app.route('/api/v1.0/searchdevice/<string:name>',methods=['GET'])
+def searchdevice(name):
+    entries=inventory.query.filter(inventory.devname==name).all()
+    if not entries:
+        abort(404)
+    data=list()
+    for entry  in entries:
+        data.append({'MAC': entry.mac, 'port': entry.port, 'status':entry.status})
+    return jsonify(data),200
+
+#API to search for information base on MAC
+@app.route('/api/v1.0/searchmac/<string:mac>',methods=['GET'])
+def searchmac(mac):
+    entries=inventory.query.filter(inventory.mac==mac).all()
+    if not entries:
+        abort(404)
+    data=list()
+    for entry  in entries:
+        data.append({'Device':entry.devname,'MAC': entry.mac, 'port': entry.port, 'status':entry.status})
+    return jsonify(data),200
+from flask import Flask,url_for
+from flask_sqlalchemy import SQLAlchemy
+
+
+
+app = Flask(__name__)
+app.config.from_object('config')
+db = SQLAlchemy(app)
+
+
+from app import views
